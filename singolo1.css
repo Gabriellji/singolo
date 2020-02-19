@@ -20,6 +20,8 @@ body {
     
 }
 
+
+
 .inner-header {
     display: flex;
     justify-content: space-between;
@@ -83,6 +85,42 @@ body {
     cursor: pointer;
   }
 
+  .slider {
+    position: relative;
+    height: 594px;
+    background: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+  .inner-slider {
+    display: flex;
+    
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px; 
+}
 
+.inner-slider img {
+    position: absolute;
+}
+.chev-left {
+    top: 280px;
+    left: 42px;
+}
+
+.chev-right {
+    top: 280px;
+    right: 40px;
+}
+
+.iphone-vertical {
+    top: -17px;
+    left: 112px;
+}
+
+.iphone-horizontal {
+    top: 68px;
+    left: 360px;
+}
 
 
