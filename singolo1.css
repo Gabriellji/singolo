@@ -9,18 +9,14 @@ body {
 .header {
     height: 89px;
     background: #2d303a;
-    border-bottom: 6px solid #323746;
-  
+    border-bottom: 6px solid #323746; 
 }
 
 .wrapper {
     width: 960px;
     align-items: center;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
-
-
 
 .inner-header {
     display: flex;
@@ -57,12 +53,10 @@ body {
     color: white;
 }
 
-
 .header__navigation ul {
     display: flex;
   }
-  
-  
+   
 .header__navigation li::after {
     padding-right: 13.5px;
     padding-left: 13.5px;
@@ -85,16 +79,14 @@ body {
     cursor: pointer;
   }
 
-  .slider {
+.slider {
     position: relative;
     height: 594px;
     background: #f06c64;
     border-bottom: 6px solid #ea676b;
 }
-  .inner-slider {
+.inner-slider {
     display: flex;
-    
-    /* justify-content: space-between; */
     justify-content: flex-start;
     align-items: center;
     padding: 10px; 
@@ -114,7 +106,7 @@ body {
 }
 
 .iphone-vertical {
-    top: -17px;
+    top: -18px;
     left: 112px;
 }
 
@@ -123,4 +115,10 @@ body {
     left: 360px;
 }
 
+.services {
+    height: 494px;
+    background: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+    color: #666d89;
+}
 
