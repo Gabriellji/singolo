@@ -21,3 +21,9 @@
     font-style: normal;
     src: url("assets/Lato-Light.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Lato-Thin";
+    font-style: normal;
+    src: url("assets/Lato-Thin.ttf") format("truetype");
+  }
