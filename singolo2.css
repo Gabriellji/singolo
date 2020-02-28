@@ -57,10 +57,10 @@ body {
         padding-right: 4px;
     }
 
-    /* .portfolio ul .active {
+    .portfolio ul .active {
         color: #ffffff;
         border: 1px solid #ffffff;
-    } */
+    }
 
     .portfolio-images {
         display: flex;
@@ -129,12 +129,13 @@ body {
         margin-bottom: -8px;
     }
     .about-us-content .profile-info p {
-        font-family: 'Lato-Bold', sans-serif;
-        font-size: 12px;
+        font-weight: 600;
+        font-size: 11px;
         text-align: justify;
         line-height: 21px;
         margin-top: 16px;
-        word-spacing: -2px
+        word-spacing: 4px;
+        letter-spacing: 0px;
     }
 
     .about-us-content .social-media-icons {
@@ -143,4 +144,10 @@ body {
 
     .about-us-content .social-media-icons a {
         padding-right: 5px;
+        transition: all .25s;
     }
+
+    .about-us-content .social-media-icons a:hover {
+        filter: brightness(50%);
+    }
+
