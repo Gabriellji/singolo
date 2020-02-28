@@ -1,0 +1,78 @@
+body {
+    width: 1020px;
+    /* height: 1604px; */
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #f0d8d9;
+    box-sizing: border-box
+}
+
+.wrapper {
+    width: 960px;
+    /* align-items: center; */
+    margin: 0 auto; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.get-quote-form {
+    background: #f06c64;
+    border-bottom: 6px solid #ea676b; 
+}
+
+
+.get-quote-form .wrapper-form {
+    display: flex;
+}
+
+.get-quote-form .wrapper-form .form {
+    display: flex;
+}
+
+.get-quote-form h1 {
+    font-family: 'Lato-Black', sans-serif;
+    font-size: 30px;
+    margin-top: 49px;
+}
+
+.get-quote-form p {
+    font-family: 'Lato-Light', sans-serif;
+    font-size: 18px;
+}
+
+.get-quote-form .form form {
+    margin-top: 26px;
+}
+
+.get-quote-form .form input, textarea {
+    background: #d6564f;
+    border: none;
+    border-radius: 5px;
+    padding-left: 14px;
+    font-size: 11px;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    
+}
+
+.get-quote-form .form input {
+    height: 37px;
+    margin: 8px 0;
+    width: 605px; 
+}
+
+.get-quote-form .form input::-webkit-input-placeholder {
+    color: #f2888b;
+}
+
+.get-quote-form .form textarea::-webkit-input-placeholder {
+    color: #f2888b;
+}
+.get-quote-form .form textarea {
+    margin: 8px 0;
+    height: 189px;
+    width: 603px;
+    padding-top: 10px;
+    resize: none;
+}
+
