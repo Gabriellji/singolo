@@ -165,7 +165,7 @@ body {
 .services-content  {
     display: flex;
      max-width: 32%;
-     margin-bottom: 18px;
+     margin-bottom: 22px;
      margin-right: -0.7px;    
 }
 
@@ -181,9 +181,10 @@ body {
 }
 
 .services-content .services-text p {
-    margin-top: -10px;
-    font-size: 12px;
+    margin-top: -12px;
     line-height: 22px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
     word-spacing: 0px;
 }
 
