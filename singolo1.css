@@ -22,10 +22,11 @@ body {
     justify-content: space-between;
     max-height: 89px;
     padding: 10px;
-    align-items: baseline;  
+    align-items: baseline; 
 }
 
 .inner-header h1 {
+    padding-top: 2px;
     font-size: 25px;
     font-weight: 400;
     font-family: 'Lato', sans-serif;
@@ -89,20 +90,21 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 10px; 
+    
 }
 
 .inner-slider img {
     position: absolute;
 }
 .chev-left {
-    top: 280px;
+    top: 281px;
     left: 42px;
     cursor: pointer;
     transition: opacity, left 0.25s;
 }
 
 .chev-right {
-    top: 280px;
+    top: 281px;
     right: 40px;
     cursor: pointer;
     transition: opacity, right 0.25s;
@@ -119,12 +121,12 @@ body {
 }
 
 .iphone-vertical {
-    top: -18px;
+    top: -17px;
     left: 112px;
 }
 
 .iphone-horizontal {
-    top: 68px;
+    top: 69px;
     left: 360px;
 }
 
@@ -146,14 +148,14 @@ body {
 
 .services-title h2 {
     margin: 0 !important;
-    padding-top: 48px;
+    padding-top: 50px;
     font-size: 30px;
     font-family: 'Lato-Black', sans-serif;
     letter-spacing: -0.2px;
 }
 
 .services-title p {
-    margin-top: 21px;
+    margin-top: 19px;
     font-size: 18px;
     font-family: 'Lato-Light', sans-serif;
     line-height: 29px;
@@ -162,26 +164,22 @@ body {
 }
 
 .services-title p span {
-    letter-spacing: -0.6px;
+    letter-spacing: -0.7px;
     word-spacing: 3.5px; 
 }
 
 .services-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 9px;
-    justify-content: space-between;
-    
-    
-    
+    margin-top: 10px;
+    justify-content: space-between;  
 }
 
 .services-content  {
     display: flex;
      max-width: 32%;
      margin-bottom: 18px;
-     margin-right: -0.5px;
-     
+     margin-right: -0.7px;    
 }
 
 .services-content .services-text {
