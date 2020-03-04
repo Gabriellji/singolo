@@ -276,17 +276,14 @@ body {
     .about-us p {
         font-family: 'Lato-Light', sans-serif;
         font-size: 18px;
-        line-height: 29px;
-    }
-
-    .about-us p span {
-        word-spacing: 1.2px;
+        line-height: 30px;
+        text-align: justify;
     }
 
     .about-them {
         display: flex;
         justify-content: space-between;
-        margin-top: 46px;
+        margin-top: 44px;
     }
     
     .about-them .about-us-content {
