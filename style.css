@@ -388,11 +388,11 @@ body {
         outline: none;
     }
     
-    .get-quote-form .form input::-webkit-input-placeholder {
+    .get-quote-form .form input::placeholder {
         color: #f2888b;   
     }
     
-    .get-quote-form .form textarea::-webkit-input-placeholder {
+    .get-quote-form .form textarea::placeholder {
         color: #f2888b;
     }
 
