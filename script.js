@@ -1,3 +1,6 @@
+
+// active menu
+
 const MENU = document.getElementById('menu');
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -5,6 +8,8 @@ MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 });
+
+// scroll
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
 
@@ -23,6 +28,8 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+// slider
 
 let items = document.querySelectorAll('.item');
 let currentItem = 0;
@@ -51,7 +58,6 @@ function showItem(direction) {
 }
 
 
-
 function previousItem(n) {
     hideItem('to-right');
     changeCurrentItem(n - 1);
@@ -77,3 +83,22 @@ document.querySelector('.control.left').addEventListener('click', function() {
         }
        
        });
+
+// turn off phone
+
+       let phone = document.querySelector('.transperent');
+       let blackScreen = document.querySelector('.iphone-black');
+
+       phone.addEventListener('click', function(){
+           blackScreen.classList.toggle('visible');
+       });
+
+       let phone2 = document.querySelector('.transperent-2');
+       let blackScreen2 = document.querySelector('.iphone-black-2');
+
+       phone2.addEventListener('click', function(){
+           blackScreen2.classList.toggle('visible');
+       });
+
+      
+   
