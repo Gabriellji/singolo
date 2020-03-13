@@ -1,8 +1,6 @@
-/* html {
-    scroll-behavior: smooth;
-} */
+
 body {
-    width: 1020px;
+    /* width: 1020px; */
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
     position: sticky;
@@ -114,7 +112,7 @@ body {
 .item {
     display: none;
     position: relative;
-    animation: .2s ease-in-out;
+    animation: .3s ease-out;
     margin: 0 auto;
 }
 .activated, 
@@ -237,9 +235,13 @@ body {
 .visible {
     display: block;
 }
-
-
-
+  
+  @media (max-width: 640px) {
+    .control > .arrow {
+      display: none;
+    }
+  
+  }
 
 
 
