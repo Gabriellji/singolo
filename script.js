@@ -188,10 +188,10 @@
 
 // Turn off phone
 
-       let verticalTransperentDiv = document.querySelector('.vertical-transperent');
-       let verticalblackScreen = document.querySelector('.iphone-black');
-       let horizontalTransperentDiv = document.querySelector('.horizontal-transperent');
-       let horizontalblackScreen = document.querySelector('.iphone-black-2');
+       const verticalTransperentDiv = document.querySelector('.vertical-transperent');
+       const verticalblackScreen = document.querySelector('.iphone-black');
+       const horizontalTransperentDiv = document.querySelector('.horizontal-transperent');
+       const horizontalblackScreen = document.querySelector('.iphone-black-2');
 
        verticalTransperentDiv.addEventListener('click', () => {
         verticalblackScreen.classList.toggle('visible');
@@ -205,10 +205,10 @@
 // Portfolio
 
 
-        let portfolioTags = document.querySelector('.portfolio__tags');
-        let tags = document.querySelectorAll('.portfolio__tags .tag');
-        let imageContainer = document.querySelector('.portfolio-images');
-        let images = document.querySelectorAll('.portfolio-images img');
+        const portfolioTags = document.querySelector('.portfolio__tags');
+        const tags = document.querySelectorAll('.portfolio__tags .tag');
+        const imageContainer = document.querySelector('.portfolio-images');
+        const images = document.querySelectorAll('.portfolio-images img');
 
         portfolioTags.addEventListener('click', (e) => {
             tags.forEach(tag => tag.classList.remove('selected'));
@@ -223,7 +223,35 @@
 
 
 
+        const button = document.querySelector('.form_button');
+        const closeButton = document.querySelector('.close_button');
+        const modalSubject = document.querySelector('.modal_subject');
+        const modalDescribe = document.querySelector('.modal_describe');
 
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const subject = document.querySelector('.subject').value.toString();
+            const describe = document.querySelector('.describe').value.toString();
+            document.querySelector('#message-block').classList.remove('hidden');
+            if (subject != '') {
+                modalSubject.textContent = 'Тема: ' + subject
+            } 
+            else {
+                modalSubject.textContent = 'Без темы'
+            };
+            if (describe != '') {
+                modalDescribe.textContent = 'Описание: ' + describe
+            } 
+            else {
+                modalDescribe.textContent = 'Без описания'
+            }
 
+        });
+
+        closeButton.addEventListener('click', () => {
+            document.querySelectorAll('#message-block span').innerText = '';
+            document.querySelector('#message-block').classList.add('hidden');
+            document.querySelector('.contact-form').reset();
+        });
 
 

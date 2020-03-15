@@ -519,6 +519,10 @@ body {
         margin: 8px 0;
         width: 603px; 
     }
+
+    input:internal-autofill-selected {
+        background: #d6564f !important;
+    }
     
     .get-quote-form .form input:focus {
         outline: none;
@@ -565,6 +569,77 @@ body {
         filter: brightness(90%);
         font-weight: bolder;
     }
+
+
+    #message-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:  rgba(80, 80, 80, 0.4);
+        /* display: flex; */
+        /* flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center; */
+        
+    }
+
+   .hidden {
+        display: none;
+    }
+
+    #message {
+        position: absolute;
+        top: 83%;
+        left: 38%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: #2d303a;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        width: 400px;
+        max-height: 90%;
+        overflow: auto;
+       
+    }
+
+    /* #message::after {
+        width: 400px;
+        min-height: 300px;
+        max-height: 90%;
+    } */
+
+    #message-block button {
+    width: 90px;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #f06c64;
+    color: #f2f2f2;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    transition: all .25s;
+
+}
+
+#message-block button:focus {
+    outline: none;
+}
+
+#message-block button:hover {
+    font-weight: bolder;
+}
+
+    /* .get-quote-form .form .hidden {
+       display: none;
+      
+    } */
     
     .wrapper-form .contact-information {
         display: flex;

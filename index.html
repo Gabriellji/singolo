@@ -226,13 +226,22 @@
                      tortor mauris condimentum nibh.</p>
             <div class="wrapper-form">
                 <div class="form">
-                    <form action method="POST">
-                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" required/>
-                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)" required />
-                        <input type="tel" maxlength="50" name="Subject" placeholder="Subject" />
-                        <textarea maxlength="500" name="Your Message" placeholder="Describe your project in detail..." required></textarea>
-                        <button style="border-radius: 5px;">Submit</button>
+                    <form action method="POST" class="contact-form">
+                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" required class="for_reset"/>
+                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)" required class="for_reset" />
+                        <input type="tel" maxlength="50" name="Subject" placeholder="Subject"  class="subject for_reset"/>
+                        <textarea maxlength="500" name="Your Message" placeholder="Describe your project in detail..." required class="describe for_reset"></textarea>
+                        <button class="form_button" style="border-radius: 5px;">Submit</button>
                     </form>
+                </div>
+                <div id="message-block" class="hidden">
+                    <div id="message">
+                    <p>Письмо отправлено <br>
+                    <span class="modal_subject"></span><br>
+                    <span class="modal_describe"></span> </p>
+               
+                    <button class="close_button">OK</button>
+                </div>
                 </div>
            
                 <div class="contact-information">
