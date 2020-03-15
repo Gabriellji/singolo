@@ -520,9 +520,6 @@ body {
         width: 603px; 
     }
 
-    input:internal-autofill-selected {
-        background: #d6564f !important;
-    }
     
     .get-quote-form .form input:focus {
         outline: none;
@@ -601,45 +598,41 @@ body {
         border-radius: 10px;
         background-color: #f2f2f2;
         width: 400px;
+        max-width: 30%;
         max-height: 90%;
-        overflow: auto;
+        overflow: hidden;
        
     }
 
-    /* #message::after {
-        width: 400px;
-        min-height: 300px;
-        max-height: 90%;
-    } */
+    #message p {
+        font-family: 'Lato-Light', sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+    }
 
     #message-block button {
-    width: 90px;
-    border: none;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #f06c64;
-    color: #f2f2f2;
-    cursor: pointer;
-    font-size: 11px;
-    font-family: inherit;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    transition: all .25s;
+        width: 90px;
+        border: none;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #f06c64;
+        color: #f2f2f2;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+        transition: all .25s;
 
 }
 
-#message-block button:focus {
-    outline: none;
-}
+    #message-block button:focus {
+        outline: none;
+    }
 
-#message-block button:hover {
-    font-weight: bolder;
-}
-
-    /* .get-quote-form .form .hidden {
-       display: none;
-      
-    } */
+    #message-block button:hover {
+        font-weight: bolder;
+    }
     
     .wrapper-form .contact-information {
         display: flex;

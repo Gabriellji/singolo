@@ -221,7 +221,7 @@
             e.target.classList.add('bordered');
         });
 
-
+// Modal window for form
 
         const button = document.querySelector('.form_button');
         const closeButton = document.querySelector('.close_button');
@@ -234,16 +234,16 @@
             const describe = document.querySelector('.describe').value.toString();
             document.querySelector('#message-block').classList.remove('hidden');
             if (subject != '') {
-                modalSubject.textContent = 'Тема: ' + subject
+                modalSubject.textContent = 'Subject: ' + subject
             } 
             else {
-                modalSubject.textContent = 'Без темы'
+                modalSubject.textContent = 'Without subject'
             };
             if (describe != '') {
-                modalDescribe.textContent = 'Описание: ' + describe
+                modalDescribe.textContent = 'Description: ' + describe
             } 
             else {
-                modalDescribe.textContent = 'Без описания'
+                modalDescribe.textContent = 'Without description'
             }
 
         });
