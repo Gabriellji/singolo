@@ -60,6 +60,7 @@
             changeCurrentItem(n - 1);
             showItem('from-left');
             changeBackgroundColor();
+            animatedSlider();
         }
 
         function nextItem(n) {
@@ -77,6 +78,7 @@
                 slider.style.backgroundColor = '#f06c64';
             }
         }
+
 
         document.querySelector('.control.left').addEventListener('click', function() {
             if (isEnabled) {
