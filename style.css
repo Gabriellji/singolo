@@ -91,6 +91,10 @@ body {
     height: 594px;
     background: #f06c64;
     overflow: hidden;
+    transition-duration: 2s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+   
 }
 
 
@@ -126,7 +130,6 @@ body {
 
   .control {
     display: flex;
-    
     position: absolute;
     top: 0;
     bottom: 0;
@@ -219,14 +222,15 @@ body {
   .iphone-black {
     display: none;
     position: absolute;
-    top: 99px;
+    top: 104px;
     left: 81px;
+
 }
 
 .iphone-black-2 {
     display: none;
     position: absolute;
-    top: 170px;
+    top: 176px;
     right: 157px;
 }
 
@@ -240,12 +244,6 @@ body {
     }
   
   } */
-
-
-
-
-
-
 
 
 .services {
