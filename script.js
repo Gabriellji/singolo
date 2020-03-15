@@ -59,14 +59,23 @@
             hideItem('to-right');
             changeCurrentItem(n - 1);
             showItem('from-left');
-          
+            changeBackgroundColor();
         }
 
         function nextItem(n) {
             hideItem('to-left');
             changeCurrentItem(n + 1);
             showItem('from-right');
-           
+            changeBackgroundColor();
+        }
+       
+        function changeBackgroundColor() {
+            if(document.querySelector('.item').classList.contains('activated')) {
+                let slider = document.querySelector('.slider');
+                slider.style.backgroundColor = '#648bf0';
+            } else {
+                slider.style.backgroundColor = '#f06c64';
+            }
         }
 
         document.querySelector('.control.left').addEventListener('click', function() {
@@ -204,7 +213,7 @@
         portfolioTags.addEventListener('click', (e) => {
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
-            images.forEach(img => img.style.order = Math.floor((Math.random()*images.length)));
+            images.forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
         });
 
         imageContainer.addEventListener('click', (e) => {
@@ -212,7 +221,7 @@
             e.target.classList.add('bordered');
         });
 
-// let sliderItems = document.querySelector('.item');
+
 
 
 
