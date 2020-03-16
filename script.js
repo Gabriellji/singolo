@@ -1,15 +1,31 @@
 
 // Active menu
 
-        const MENU = document.getElementById('menu');
-        const anchors = document.querySelectorAll('a[href^="#"');
+            const addLinksClickHandler = () => {
+                document.querySelector('#menu').addEventListener('click', (e) => {
+                        if (e.target.classList.contains('link')) {
+                            let clickedLink = e.target;
+                            removeSelectedLinks();
+                            selectClickedLink(clickedLink);
+                        }
+                })
+            }
 
-        MENU.addEventListener('click', (event) => {
-            MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-            event.target.classList.add('active');
-        });
+            const removeSelectedLinks = () => {
+                let links = document.querySelectorAll('.link');
+                links.forEach(link => {
+                    link.classList.remove('active');
+                })
+            }
+
+            const selectClickedLink = (clickedLink) => {
+                clickedLink.classList.add('active');
+            }
+            addLinksClickHandler(); 
 
 // Scroll
+
+            const anchors = document.querySelectorAll('.link');
 
             anchors.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -61,7 +77,6 @@
             changeCurrentItem(n - 1);
             showItem('from-left');
             changeBackgroundColor();
-            // animatedSlider();
         }
 
         function nextItem(n) {
