@@ -230,21 +230,9 @@
         const modalSubject = document.querySelector('.modal_subject');
         const modalDescribe = document.querySelector('.modal_describe');
         const form = document.querySelector('.contact-form');
-        const name = document.querySelector('.name');
-        const email = document.querySelector('.email');
 
-        button.addEventListener('click', (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            if(!name.validity.valid) {
-                name.focus();
-                return;
-            } 
-            if(!email.validity.valid) {
-                email.focus();
-                return;
-            }    
-            form.checkValidity();
-
             const subject = document.querySelector('.subject').value.toString();
             const describe = document.querySelector('.describe').value.toString();
             document.querySelector('#message-block').classList.remove('hidden');
