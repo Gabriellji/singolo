@@ -231,7 +231,7 @@
         portfolioTags.addEventListener('click', (e) => {
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
-            images.forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
+            images.forEach(img => img.style.order = Math.floor(Math.random() * 12) + 1);
             images.forEach(img => img.classList.remove('bordered'));
         });
 
