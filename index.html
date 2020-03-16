@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
 
-    
+    <a href="https://icons8.com/icon/36895/lotus">Lotus icon by Icons8</a>
     
 </head>
 <body>
@@ -226,11 +226,11 @@
                      tortor mauris condimentum nibh.</p>
             <div class="wrapper-form">
                 <div class="form">
-                    <form action method="POST" class="contact-form">
-                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" required class="for_reset"/>
-                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)" required class="for_reset" />
+                    <form action method="POST" enctype="text/plain" class="contact-form">
+                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" pattern="^[а-яА-ЯёЁa-zA-Z0\s]+$" required class="for_reset name"/>
+                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)"  class="for_reset email" required/>
                         <input type="tel" maxlength="50" name="Subject" placeholder="Subject"  class="subject for_reset"/>
-                        <textarea maxlength="300" name="Your Message" placeholder="Describe your project in detail..." required class="describe for_reset"></textarea>
+                        <textarea maxlength="300" name="Your Message" placeholder="Describe your project in detail..."  class="describe for_reset"></textarea>
                         <button class="form_button" style="border-radius: 5px;">Submit</button>
                     </form>
                 </div>

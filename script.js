@@ -216,6 +216,7 @@
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
             images.forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
+            images.forEach(img => img.classList.remove('bordered'));
         });
 
         imageContainer.addEventListener('click', (e) => {
@@ -229,8 +230,9 @@
         const closeButton = document.querySelector('.close_button');
         const modalSubject = document.querySelector('.modal_subject');
         const modalDescribe = document.querySelector('.modal_describe');
+        const form = document.querySelector('.contact-form');
 
-        button.addEventListener('click', (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
             const subject = document.querySelector('.subject').value.toString();
             const describe = document.querySelector('.describe').value.toString();
@@ -257,3 +259,4 @@
         });
 
 
+    
