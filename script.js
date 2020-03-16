@@ -45,6 +45,7 @@
                 this.classList.remove('activated', direction);
             });
         }
+        
 
         function showItem(direction) {
             items[currentItem].classList.add('next', direction);
@@ -60,7 +61,7 @@
             changeCurrentItem(n - 1);
             showItem('from-left');
             changeBackgroundColor();
-            animatedSlider();
+            // animatedSlider();
         }
 
         function nextItem(n) {

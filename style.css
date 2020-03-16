@@ -88,31 +88,28 @@ body {
     height: 594px;
     background: #f06c64;
     overflow: hidden;
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-property: background-color;
-    transition-timing-function: ease;
-   
+    transition-timing-function: ease; 
 }
-
-
 
 .inner-slider {
     position: relative;
-
+    
 }
 
-.inner-slider .iphone{
+.items-container {
     position: absolute;
-    top: -10px;
-    left: -40px;
+    overflow: hidden;
+    top: -13px;
 }
-
 
 .item {
     display: none;
     position: relative;
-    animation: .7s ease-in-out;
+    animation: .7s linear;
     margin: 0 auto;
+   
 }
 .activated, 
 .next {
@@ -195,10 +192,8 @@ body {
     position: absolute;
     width: 217px;
     height: 458px;
-    background-color: green;
-    opacity: 0%;
-    top: 38px;
-    left: 71px;
+    top: 55px;
+    left: 112px;
     border-radius: 28px;
     cursor: pointer;
   }
@@ -207,10 +202,8 @@ body {
     position: absolute;
     width:458px;
     height: 217px;
-    background-color: green;
-    opacity: 0%;
-    top: 161px;
-    right: 97px;
+    top: 177px;
+    right: 137px;
     border-radius: 28px;
     cursor: pointer; 
   }
@@ -218,28 +211,28 @@ body {
   .iphone-black {
     display: none;
     position: absolute;
-    top: 104px;
-    left: 81px;
+    top: 114px;
+    left: 121px;
 
 }
 
 .iphone-black-2 {
     display: none;
     position: absolute;
-    top: 176px;
-    right: 157px;
+    top: 186px;
+    right: 197px;
 }
 
 .visible {
     display: block;
 }
   
-  /* @media (max-width: 640px) {
+  @media (max-width: 640px) {
     .control > .arrow {
       display: none;
     }
   
-  } */
+  }
 
 
 .services {
@@ -505,7 +498,17 @@ body {
         padding-left: 16px;
         font-size: 11px;
         font-family: inherit;
-        letter-spacing: 0.4px;    
+        letter-spacing: 0.4px;  
+        color: #f0d8d9; 
+        transition: background-color .5s; 
+    }
+
+    .get-quote-form .form textarea:hover {
+        background-color: #9b403b;
+    }
+
+    .get-quote-form .form input:hover {
+        background-color: #9b403b;
     }
     
     .get-quote-form .form input {
@@ -530,10 +533,6 @@ body {
     .get-quote-form .form textarea::placeholder {
         color: #f2888b;
     }
-
-     input:required:invalid {
-        border-color: red;
-      }
 
     .get-quote-form .form textarea {
         margin: 8px 0;
