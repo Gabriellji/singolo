@@ -6,36 +6,54 @@
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    
 </head>
 <body>
-    <header class="header">
-        <div class="wrapper">
-            <div class="inner-header">
+   
+    <header class="header"  >
+        <div class="wrapper" >
+            <div class="inner-header" >
             <h1>Singolo<span>*</span></h1>
             <nav class="header__navigation">
-                <ul class="navigation">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li> 
+                <ul class="navigation" id="menu" >
+                    <li><a  class="menu_link link" href="#slider">Home</a></li> 
+                    <li><a class="menu_link link" href="#services" >Services</a></li>
+                    <li><a class="menu_link link" href="#portfolio" >Portfolio</a></li>
+                    <li><a class="menu_link link before-last-link" href="#about" >About</a></li>
+                    <li><a class="menu_link link last-link" href="#contact" >Contact</a></li> 
                 </ul>
             </nav>
         </div>
+        
         </div>
     </header>
     <main>
-        <section class="slider">
+        <section class="slider" id="slider">
             <div class="wrapper">
                 <div class="inner-slider">
-                    <img class="chev-left" src="assets/chev-left.png" alt="arrow">
-                    <img class="iphone-vertical" src="assets/iPhone Vertical.png" alt="iphone">
-                    <img class="iphone-horizontal" src="assets/iPhone Horizontal.png" alt="iphone">
-                    <img class="chev-right" src="assets/chev-right.png" alt="iphone">
+                    <div class="items-container">
+                        <div class="item activated">
+                            <img class="iphone" src="assets/Slide-1.png" alt="iphone">
+                            <div class="vertical-transperent"></div>
+                           <img  class="iphone-black unvisible" src="assets/Screen-black.png" alt="black-screen">
+                           <div class="horizontal-transperent"></div>
+                           <img class="iphone-black-2 unvisible"  src="assets/Screen-black-2.png" alt="black-screen">
+                        </div>
+                        <div class="item">
+                              <img class="iphone" src="assets/Slider.png" alt="iphone">
+                        </div>
+                    </div>
+                    <div class="control left">
+                        <div class="arrow left"><img class="chev-left" src="assets/chev-left.png" alt="arrow"></div>
+                      </div>
+                      <div class="control right">
+                        <div class="arrow right"><img class="chev-right" src="assets/chev-right.png" alt="iphone"></div>
+                      </div>
+                
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services" data-offset="95">
             <div class="wrapper">
                 <div class="services-title">
                 <h2>Our Services</h2>
@@ -103,39 +121,39 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
 
             <div class="wrapper">
                 <h1>Portfolio</h1>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
                      eget lacinia odio sem nec elit.</p>
     
-                <ul>
-                    <li class="active">All</li>
-                    <li>Web Design</li>
-                    <li>Graphic Design</li>
-                    <li>Artwork</li>
+                <ul class="portfolio__tags">
+                    <li class="tag selected">All</li>
+                    <li class="tag nonactive">Web Design</li>
+                    <li class="tag">Graphic Design</li>
+                    <li class="tag">Artwork</li>
                 </ul>
                 <div class="portfolio-images">
-                    <img src="assets/portfolio-images/row1/1.jpg" alt="">
-                    <img src="assets/portfolio-images/row1/2.jpg" alt="">
-                    <img src="assets/portfolio-images/row1/3.jpg" alt="">
-                    <img src="assets/portfolio-images/row1/4.jpg" alt="">
-                    <img src="assets/portfolio-images/row2/1.jpg" alt="">
-                    <img src="assets/portfolio-images/row2/2.jpg" alt="">
-                    <img src="assets/portfolio-images/row2/3.jpg" alt="">
-                    <img src="assets/portfolio-images/row2/4.jpg" alt="">
-                    <img src="assets/portfolio-images/row3/1.jpg" alt="">
-                    <img src="assets/portfolio-images/row3/2.jpg" alt="">
-                    <img src="assets/portfolio-images/row3/3.jpg" alt="">
-                    <img src="assets/portfolio-images/row3/4.jpg" alt="">
+                    <img src="assets/portfolio-images/row1/1.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row1/2.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row1/3.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row1/4.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row2/1.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row2/2.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row2/3.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row2/4.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row3/1.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row3/2.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row3/3.jpg" alt="portfolio">
+                    <img src="assets/portfolio-images/row3/4.jpg" alt="portfolio">
                     
                 </div>
     
             </div>
         </section>
     
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="wrapper">
                 <h1>About Us</h1>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -197,7 +215,7 @@
             </div>
     
         </section>
-        <section class="get-quote-form">
+        <section class="get-quote-form" id="contact">
             <div class="wrapper">
                 <h1>Get a Quote</h1>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -206,13 +224,21 @@
                      tortor mauris condimentum nibh.</p>
             <div class="wrapper-form">
                 <div class="form">
-                    <form action method="POST">
-                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" required/>
-                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)" required />
-                        <input type="tel" maxlength="50" name="Subject" placeholder="Subject" />
-                        <textarea maxlength="500" name="Your Message" placeholder="Describe your project in detail..." required></textarea>
-                        <button style="border-radius: 5px;">Submit</button>
+                    <form action method="POST" enctype="text/plain" class="contact-form">
+                        <input type="text" maxlength="50" name="Name" placeholder="Name (Required)" pattern="^[а-яА-ЯёЁa-zA-Z0\s]+$" required class="for_reset name"/>
+                        <input type="email" maxlength="50" name="Email" placeholder="Email (Required)"  class="for_reset email" required/>
+                        <input type="tel" maxlength="50" name="Subject" placeholder="Subject"  class="subject for_reset"/>
+                        <textarea maxlength="300" name="Your Message" placeholder="Describe your project in detail..."  class="describe for_reset"></textarea>
+                        <button class="form_button" style="border-radius: 5px;">Submit</button>
                     </form>
+                </div>
+                <div id="message-block" class="hidden">
+                    <div id="message">
+                    <p><b>The letter was sent</b><br>
+                    <span class="modal_subject"></span><br>
+                    <span class="modal_describe"></span> </p>
+                    <button class="close_button">OK</button>
+                </div>
                 </div>
            
                 <div class="contact-information">
@@ -249,5 +275,7 @@
         </div>
         </div>
     </footer>
+   <script src="script.js"></script>
 </body>
+
 </html>
