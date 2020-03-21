@@ -1,38 +1,42 @@
 
-// Active menu
+// Active links inside menu            
 
-            const addLinksClickHandler = () => {
-                document.querySelector('#menu').addEventListener('click', (e) => {
-                        if (e.target.classList.contains('link')) {
-                            let clickedLink = e.target;
-                            removeSelectedLinks();
-                            selectClickedLink(clickedLink);
-                        }
-                })
-            }
+            document.addEventListener('scroll', onScroll );
 
-            const removeSelectedLinks = () => {
-                let links = document.querySelectorAll('.link');
-                links.forEach(link => {
-                    link.classList.remove('active');
-                })
-            }
+            function onScroll(event) {
+                const currentPosition = window.scrollY;
+                const sections = document.querySelectorAll('section');
+                const lastLink = document.querySelector('.last-link');
+                
+                sections.forEach((el) => {
 
-            const selectClickedLink = (clickedLink) => {
-                clickedLink.classList.add('active');
+                    if((el.offsetTop - topOffset) <= currentPosition && (el.offsetTop + el.offsetHeight - topOffset) > currentPosition) {
+                        anchors.forEach((a) => {
+                            a.classList.remove('active');
+                         
+                            if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                                a.classList.add('active');
+                            }
+                            if (currentPosition + 1 >= document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+                                a.classList.remove('active');
+                                lastLink.classList.add('active');
+                            }
+                        })
+                    }
+                });
             }
-            addLinksClickHandler(); 
 
 // Scroll
 
             const anchors = document.querySelectorAll('.link');
+            const topOffset = document.querySelector('.header').offsetHeight;
 
             anchors.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 let href = this.getAttribute('href').substring(1);
                 const scrollTarget = document.getElementById(href);
-                const topOffset = document.querySelector('.header').offsetHeight;
+                
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
 
@@ -229,10 +233,12 @@
         const images = document.querySelectorAll('.portfolio-images img');
 
         portfolioTags.addEventListener('click', (e) => {
+            if (e.target.classList.contains('tag')){
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
             images.forEach(img => img.style.order = Math.floor(Math.random() * 12) + 1);
             images.forEach(img => img.classList.remove('bordered'));
+        }
         });
 
         imageContainer.addEventListener('click', (e) => {
