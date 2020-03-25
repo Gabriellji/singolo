@@ -7,6 +7,8 @@
                 const currentPosition = window.scrollY;
                 const sections = document.querySelectorAll('section');
                 const lastLink = document.querySelector('.last-link');
+
+            
                 
                 sections.forEach((el) => {
 
