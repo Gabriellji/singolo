@@ -285,27 +285,30 @@
 
 // hamburger menu
 
-        const hamburger = document.querySelector('.hamburger');
-        const navigation = document.querySelector('.header__navigation');
-        const logo = document.querySelector('.singolo-logo');
+        const menuHamburgerButton = document.querySelector('.hamburger');
+        const menuNavigation = document.querySelector('.header__navigation');
+        const menuLogo = document.querySelector('.singolo-logo');
+        const menuHiddenOverlay = document.querySelector('.overlay');
 
 
 
         const openMobileMenu = () => {
-            hamburger.classList.add('clicked__hamburger');
-            navigation.style.left = "0%";
-            logo.style.left = "25%";
+            menuHiddenOverlay.classList.add('hidden-overlay');
+            menuHamburgerButton.classList.add('clicked__hamburger');
+            menuNavigation.style.left = "0%";
+            menuLogo.style.left = "25%";
 
         }
 
         const closeMobileMenu = () => {
-            hamburger.classList.remove('clicked__hamburger');
-            navigation.style.left = "-100%";
-            logo.style.left = "50%";
+            menuHiddenOverlay.classList.remove('hidden-overlay');
+            menuHamburgerButton.classList.remove('clicked__hamburger');
+            menuNavigation.style.left = "-100%";
+            menuLogo.style.left = "50%";
         }
 
         const clickHamburgerHandler = () => {
-            if (navigation.style.left === "-100%" || navigation.style.left === "") {
+            if (menuNavigation.style.left === "-100%" || menuNavigation.style.left === "") {
                 openMobileMenu();
             } else {
                 closeMobileMenu();
@@ -318,5 +321,5 @@
             }
         }
 
-        hamburger.addEventListener('click', clickHamburgerHandler);
-        navigation.addEventListener('click', clickLinksHandler);
+        menuHamburgerButton.addEventListener('click', clickHamburgerHandler);
+        menuNavigation.addEventListener('click', clickLinksHandler);
