@@ -7,6 +7,8 @@
                 const currentPosition = window.scrollY;
                 const sections = document.querySelectorAll('section');
                 const lastLink = document.querySelector('.last-link');
+
+            
                 
                 sections.forEach((el) => {
 
@@ -231,20 +233,47 @@
         const tags = document.querySelectorAll('.portfolio__tags .tag');
         const imageContainer = document.querySelector('.portfolio-images');
         const images = document.querySelectorAll('.portfolio-images img');
+        const portfolioImagesArray = [];
+        
+        images.forEach(e => portfolioImagesArray.push(e.src));
+
+        function replacePortfolioImages () {
+            shuffle();
+            for (let i = 0; i < portfolioImagesArray.length; i++) {
+                images[i].src = portfolioImagesArray[i];
+            }
+          }
+
+         function shuffle () {
+            const arr = [...portfolioImagesArray];
+              function replace () {
+                portfolioImagesArray.sort(() => Math.floor(Math.random() -0.5));
+              arr.forEach((el, i) => {
+                if (el === portfolioImagesArray[i]) {
+                  replace();
+                };
+              });
+            }
+            replace();
+          }
+
+          
 
         portfolioTags.addEventListener('click', (e) => {
             if (e.target.classList.contains('tag')){
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
-            images.forEach(img => img.style.order = Math.floor(Math.random() * 12) + 1);
             images.forEach(img => img.classList.remove('bordered'));
-        }
+            replacePortfolioImages();
+          }
         });
 
-        imageContainer.addEventListener('click', (e) => {
+            imageContainer.addEventListener('click', (e) => {
             images.forEach(img => img.classList.remove('bordered'));
             e.target.classList.add('bordered');
         });
+
+        
 
 // Modal window for form
 
@@ -281,4 +310,43 @@
         });
 
 
-    
+// hamburger menu
+
+        const menuHamburgerButton = document.querySelector('.hamburger');
+        const menuNavigation = document.querySelector('.header__navigation');
+        const menuLogo = document.querySelector('.singolo-logo');
+        const menuHiddenOverlay = document.querySelector('.overlay');
+
+
+
+        const openMobileMenu = () => {
+            menuHiddenOverlay.classList.add('hidden-overlay');
+            menuHamburgerButton.classList.add('clicked__hamburger');
+            menuNavigation.style.left = "0%";
+            menuLogo.style.left = "25%";
+
+        }
+
+        const closeMobileMenu = () => {
+            menuHiddenOverlay.classList.remove('hidden-overlay');
+            menuHamburgerButton.classList.remove('clicked__hamburger');
+            menuNavigation.style.left = "-100%";
+            menuLogo.style.left = "50%";
+        }
+
+        const clickHamburgerHandler = () => {
+            if (menuNavigation.style.left === "-100%" || menuNavigation.style.left === "") {
+                openMobileMenu();
+            } else {
+                closeMobileMenu();
+            }
+        }
+
+        const clickLinksHandler = (e) => {
+            if (e.target.tagName === 'A') {
+                closeMobileMenu();
+            }
+        }
+
+        menuHamburgerButton.addEventListener('click', clickHamburgerHandler);
+        menuNavigation.addEventListener('click', clickLinksHandler);
