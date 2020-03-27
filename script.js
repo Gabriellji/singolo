@@ -283,4 +283,40 @@
         });
 
 
-    
+// hamburger menu
+
+        const hamburger = document.querySelector('.hamburger');
+        const navigation = document.querySelector('.header__navigation');
+        const logo = document.querySelector('.singolo-logo');
+
+
+
+        const openMobileMenu = () => {
+            hamburger.classList.add('clicked__hamburger');
+            navigation.style.left = "0%";
+            logo.style.left = "25%";
+
+        }
+
+        const closeMobileMenu = () => {
+            hamburger.classList.remove('clicked__hamburger');
+            navigation.style.left = "-100%";
+            logo.style.left = "50%";
+        }
+
+        const clickHamburgerHandler = () => {
+            if (navigation.style.left === "-100%" || navigation.style.left === "") {
+                openMobileMenu();
+            } else {
+                closeMobileMenu();
+            }
+        }
+
+        const clickLinksHandler = (e) => {
+            if (e.target.tagName === 'A') {
+                closeMobileMenu();
+            }
+        }
+
+        hamburger.addEventListener('click', clickHamburgerHandler);
+        navigation.addEventListener('click', clickLinksHandler);
