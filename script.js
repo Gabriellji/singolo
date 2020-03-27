@@ -233,20 +233,47 @@
         const tags = document.querySelectorAll('.portfolio__tags .tag');
         const imageContainer = document.querySelector('.portfolio-images');
         const images = document.querySelectorAll('.portfolio-images img');
+        const portfolioImagesArray = [];
+        
+        images.forEach(e => portfolioImagesArray.push(e.src));
+
+        function replacePortfolioImages () {
+            shuffle();
+            for (let i = 0; i < portfolioImagesArray.length; i++) {
+                images[i].src = portfolioImagesArray[i];
+            }
+          }
+
+         function shuffle () {
+            const arr = [...portfolioImagesArray];
+              function replace () {
+                portfolioImagesArray.sort(() => Math.floor(Math.random() -0.5));
+              arr.forEach((el, i) => {
+                if (el === portfolioImagesArray[i]) {
+                  replace();
+                };
+              });
+            }
+            replace();
+          }
+
+          
 
         portfolioTags.addEventListener('click', (e) => {
             if (e.target.classList.contains('tag')){
             tags.forEach(tag => tag.classList.remove('selected'));
             e.target.classList.add('selected');
-            images.forEach(img => img.style.order = Math.floor(Math.random() * 12) + 1);
             images.forEach(img => img.classList.remove('bordered'));
-        }
+            replacePortfolioImages();
+          }
         });
 
-        imageContainer.addEventListener('click', (e) => {
+            imageContainer.addEventListener('click', (e) => {
             images.forEach(img => img.classList.remove('bordered'));
             e.target.classList.add('bordered');
         });
+
+        
 
 // Modal window for form
 
