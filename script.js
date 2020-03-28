@@ -323,7 +323,7 @@
             menuHiddenOverlay.classList.add('hidden-overlay');
             menuHamburgerButton.classList.add('clicked__hamburger');
             menuNavigation.style.left = "0%";
-            menuLogo.style.left = "30%";
+            menuLogo.style.left = "35%";
 
         }
 
