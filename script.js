@@ -235,7 +235,7 @@
         const images = document.querySelectorAll('.portfolio-images img');
         const portfolioImagesArray = [];
         
-        images.forEach(e => portfolioImagesArray.push(e.src));
+        images.forEach(el => portfolioImagesArray.push(el.src));
 
         function replacePortfolioImages () {
             shuffle();
@@ -247,7 +247,7 @@
          function shuffle () {
             const arr = [...portfolioImagesArray];
               function replace () {
-                portfolioImagesArray.sort(() => Math.floor(Math.random() -0.5));
+                portfolioImagesArray.sort(function() {return 0.5 - Math.random() });
               arr.forEach((el, i) => {
                 if (el === portfolioImagesArray[i]) {
                   replace();
@@ -323,7 +323,7 @@
             menuHiddenOverlay.classList.add('hidden-overlay');
             menuHamburgerButton.classList.add('clicked__hamburger');
             menuNavigation.style.left = "0%";
-            menuLogo.style.left = "25%";
+            menuLogo.style.left = "30%";
 
         }
 
